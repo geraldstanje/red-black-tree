@@ -10,12 +10,13 @@ class RedBlackTree
         bool color;
         node *left, *right;
     };
-    node root;
+    node *root;
 
-    node rotateLeft(node n);
-    node rotateRight(node n);
-    void flipColor(node n);
-
+//    node *rotateLeft(node *n);
+//    node *rotateRight(node *n);
+//    void flipColor(node *n);
+    node *insertHelper(const K &key, const V &value, node *n);
+    void cleanNode(node *n);
 public:
     RedBlackTree();
     ~RedBlackTree();
